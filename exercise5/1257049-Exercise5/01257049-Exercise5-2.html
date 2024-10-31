@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw5-2</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #00c787;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: #bfc0c2;
+        display: wrap;
+        border: solid;
+        width: 150px;
+        border-radius: 10px;
+        padding: 5px;
+        margin-right: 2px;
+        margin-left: 3px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .con {
+        background-color: white;
+        padding: 10px;
+        margin-top: 0px;
+        margin-bottom: 3px;
+        border-radius: 10px;
+        width: auto;
+        display: flex;
+        max-width: fit-content;
+    }
+
+    input {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        padding: 8px;
+    }
+
+    p {
+        margin-top: 18px;
+        margin-bottom: 0px;
+        
+    }
+
+    hr {
+        width: 853px;
+        float: left;
+        background-color: gray;
+        margin-top: 7px;
+        border: none;
+        height: 5px
+    }
+
+    button:hover {
+        opacity: 0.7;
+    }
+
+    @media only screen and (max-width: 852px) {
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #00c787;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #bfc0c2;
+            display: wrap;
+            border: solid;
+            border-radius: 10px;
+            width: 150px;
+            padding: 5px;
+            margin-right: 2px;
+            margin-left: 3px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 14px;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .con {
+            background-color: white;
+            padding: 10px;
+            margin-top: 0px;
+            margin-bottom: 3px;
+            border-radius: 10px;
+            width: auto;
+            display: flex;
+            max-width: fit-content;
+        }
+
+        input {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+            margin-bottom: 0px;
+        }
+
+        hr {
+            display: flex-start;
+            background-color: gray;
+            margin-top: 7px;
+            border: none;
+            height: 5px;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="con">
+        <p>Side Length(<=10):</p><input type="text" id="sz" placeholder="please input size"><button id="trian">Draw
+                    Baseball Triangle</button><button id="square">Draw Baseball square</button><button id="spSq">Draw
+                    Special square</button>
+    </div>
+
+    <hr>
+</hr>
+<br />
+<br />
+    <img src="blank.png" id="00">
+    <img src="blank.png" id="01">
+    <img src="blank.png" id="02">
+    <img src="blank.png" id="03">
+    <img src="blank.png" id="04">
+    <img src="blank.png" id="05">
+    <img src="blank.png" id="06">
+    <img src="blank.png" id="07">
+    <img src="blank.png" id="08">
+    <img src="blank.png" id="09">
+    <br />
+    <img src="blank.png" id="10">
+    <img src="blank.png" id="11">
+    <img src="blank.png" id="12">
+    <img src="blank.png" id="13">
+    <img src="blank.png" id="14">
+    <img src="blank.png" id="15">
+    <img src="blank.png" id="16">
+    <img src="blank.png" id="17">
+    <img src="blank.png" id="18">
+    <img src="blank.png" id="19">
+    <br />
+    <img src="blank.png" id="20">
+    <img src="blank.png" id="21">
+    <img src="blank.png" id="22">
+    <img src="blank.png" id="23">
+    <img src="blank.png" id="24">
+    <img src="blank.png" id="25">
+    <img src="blank.png" id="26">
+    <img src="blank.png" id="27">
+    <img src="blank.png" id="28">
+    <img src="blank.png" id="29">
+    <br />
+    <img src="blank.png" id="30">
+    <img src="blank.png" id="31">
+    <img src="blank.png" id="32">
+    <img src="blank.png" id="33">
+    <img src="blank.png" id="34">
+    <img src="blank.png" id="35">
+    <img src="blank.png" id="36">
+    <img src="blank.png" id="37">
+    <img src="blank.png" id="38">
+    <img src="blank.png" id="39">
+    <br />
+    <img src="blank.png" id="40">
+    <img src="blank.png" id="41">
+    <img src="blank.png" id="42">
+    <img src="blank.png" id="43">
+    <img src="blank.png" id="44">
+    <img src="blank.png" id="45">
+    <img src="blank.png" id="46">
+    <img src="blank.png" id="47">
+    <img src="blank.png" id="48">
+    <img src="blank.png" id="49">
+    <br />
+    <img src="blank.png" id="50">
+    <img src="blank.png" id="51">
+    <img src="blank.png" id="52">
+    <img src="blank.png" id="53">
+    <img src="blank.png" id="54">
+    <img src="blank.png" id="55">
+    <img src="blank.png" id="56">
+    <img src="blank.png" id="57">
+    <img src="blank.png" id="58">
+    <img src="blank.png" id="59">
+    <br />
+    <img src="blank.png" id="60">
+    <img src="blank.png" id="61">
+    <img src="blank.png" id="62">
+    <img src="blank.png" id="63">
+    <img src="blank.png" id="64">
+    <img src="blank.png" id="65">
+    <img src="blank.png" id="66">
+    <img src="blank.png" id="67">
+    <img src="blank.png" id="68">
+    <img src="blank.png" id="69">
+    <br />
+    <img src="blank.png" id="70">
+    <img src="blank.png" id="71">
+    <img src="blank.png" id="72">
+    <img src="blank.png" id="73">
+    <img src="blank.png" id="74">
+    <img src="blank.png" id="75">
+    <img src="blank.png" id="76">
+    <img src="blank.png" id="77">
+    <img src="blank.png" id="78">
+    <img src="blank.png" id="79">
+    <br />
+    <img src="blank.png" id="80">
+    <img src="blank.png" id="81">
+    <img src="blank.png" id="82">
+    <img src="blank.png" id="83">
+    <img src="blank.png" id="84">
+    <img src="blank.png" id="85">
+    <img src="blank.png" id="86">
+    <img src="blank.png" id="87">
+    <img src="blank.png" id="88">
+    <img src="blank.png" id="89">
+    <br />
+    <img src="blank.png" id="90">
+    <img src="blank.png" id="91">
+    <img src="blank.png" id="92">
+    <img src="blank.png" id="93">
+    <img src="blank.png" id="94">
+    <img src="blank.png" id="95">
+    <img src="blank.png" id="96">
+    <img src="blank.png" id="97">
+    <img src="blank.png" id="98">
+    <img src="blank.png" id="99">
+    <br />
+
+    <script type="text/javascript">
+
+        let e1 = document.getElementById("trian");
+        function emp() {
+            for (let i = 0; i < 10; i++) {
+                for (let j = 0; j < 10; j++) {
+                    let ss = i.toString() + j.toString();
+                    let im = document.getElementById(ss);
+                    im.setAttribute("src", "blank.png");
+                }
+            }
+            return;
+        }
+        function check(n) {
+            return n > 10 || n < 1;
+        }
+        function getSz() {
+            let ssz = document.getElementById("sz").value;
+            ssz = parseInt(ssz);
+            return ssz;
+        }
+        e1.addEventListener('click', function () {
+            emp();
+            let ssz = getSz();
+            if (check(ssz)) {
+                window.alert("not available number~~");
+                return;
+            }
+            for (let i = 0; i < ssz; i++) {
+                for (let j = 0; j < ssz; j++) {
+                    if (i >= -j + ssz - 1) {
+                        let ss = i.toString() + j.toString();
+                        let image = document.getElementById(ss);
+                        image.setAttribute("src", "baseball.jpg");
+                    }
+                }
+            }
+        });
+        let e2 = document.getElementById("square");
+        let e3 = document.getElementById("spSq");
+        e2.addEventListener('click', function () {
+            emp();
+            let sz = getSz();
+            if (check(sz)) {
+                window.alert("not available number~~");
+                return;
+            }
+            for (let i = 0; i < sz; i++) {
+                for (let j = 0; j < sz; j++) {
+                    let ss = i.toString() + j.toString();
+                    im = document.getElementById(ss);
+                    im.setAttribute("src", "baseball.jpg");
+                }
+            }
+        });
+
+        function kk() {
+            let k = Math.random();
+            if (k > 0.33) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        e3.addEventListener('click', function () {
+            emp();
+            let cnt = 0;
+            let cc = 0;
+            let sz = getSz();
+            if (check(sz)) {
+                window.alert("not available number~~");
+                return;
+            }
+            const f = sz * sz / 3;
+            const ff = f * 2;
+            for (let i = 0; i < sz; i++) {
+                for (let j = 0; j < sz; j++) {
+                    if ((kk() && cc <= ff) || cnt >= f) {
+                        let im = document.getElementById(i.toString() + j.toString());
+                        im.setAttribute("src", "baseball.jpg");
+                        cc += 1;
+                    }
+                    else {
+                        let im = document.getElementById(i.toString() + j.toString());
+                        im.setAttribute("src", "baseball-x.jpg");
+                        cnt += 1;
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

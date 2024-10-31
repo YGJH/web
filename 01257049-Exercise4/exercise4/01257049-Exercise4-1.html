@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="exercise4" content="width=device-width, initial-scale=1.0">
+    <title>exercise4-2</title>
+    <style>
+        @import url(navigate.css);
+    </style>
+    <script>
+        name = prompt("Please input your name");
+        birth = prompt("Please input your birth year");
+        // Calculate milliseconds in a year
+        const minute = 1000 * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        const year = day * 365;
+        // Divide Time with a year
+        const d = new Date();
+        let years = Math.round(d.getTime() / year);
+        y = years + 1970 - birth - 1;
+
+        if (y > 0 && name != "" && y != NaN) {
+            if (y == 1) {
+                console.log('Hello,'+name+'!\n');
+                console.log('Your are one year old!');
+                document.writeln("<span>Hello, </span><span class=\"name\">" + name + "</span><span> !</span>"
+                + "</br>" +
+                "<span>You are </span><span class=\"temp\">one</span><span> year old!</span>");
+            }
+            else if ( y > 0 ){
+                console.log('Hello,'+name+'!\n');
+                console.log('Your are ' + y + ' year old!');
+                document.writeln("<span>Hello, </span><span class=\"name\">" + name + "</span><span>!</span>"
+                    + "</br>" +
+                    "<span>You are </span><span class=\"temp\">" + y + "</span>" + "<span> years old!</span>");
+            }
+        } else {
+            alert("Your input is incorrect!!");
+            console.log('Hello,'+name+'!\n');
+            console.log('Your input is incorrect\n');
+            document.writeln("<span>Hello, </span><span class=\"name\">" + name + "</span><span> !</span>"
+                + "</br>" +
+                "<h1>Your age is a mystery!</h1>");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

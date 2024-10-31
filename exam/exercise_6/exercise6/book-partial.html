@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的軟體開發技術書籍收藏</title>
+    <style>
+        @media screen and (max-width: 600px) {
+            .book {
+                width: 100%;
+            }
+     
+        }
+        body {
+            font-family: "cwTeXFangSong";
+        }
+        
+        h1 {
+            color: darkblue;
+            font-size: 32px;
+            text-align: center;
+        }
+        
+        p {
+            color: #030303;
+            background-color: #d4f1f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .bookList{
+            flex-wrap: wrap;
+            display: flex;
+        }
+        .book {
+            display: flex;
+            width: 50%;
+            float: left;
+            margin-bottom: 10px;
+        }
+        
+        .temp{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .book img {
+            float: left;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .book-title {
+            flex-direction: column;
+            margin-left: 10px;
+            color: orange;
+            float: left;
+        }
+        
+        .book-description {
+            margin-left: 10px;
+            float: left;
+            color: gray;
+            margin-top: 10px;
+        }
+        .book-url a {
+            margin-left: 10px;
+            margin-top: 10px;
+            float: left;
+            text-decoration: none;
+        }
+
+        input, button {
+            width: 400px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML 部分 -->
+    <h1>我的軟體開發技術書籍收藏</h1>
+    <p>主要收藏Web programming與Software engineering相關書籍</p>
+
+    <div id="bookList">
+        <!-- 初始書籍展示區塊 -->
+        <div class="book">
+            
+            <img src="https://via.placeholder.com/150" alt="書籍封面">
+            <div class="temp">
+                <div class="book-title">《JavaScript: The Good Parts》</div>
+                <div class="book-description">由Douglas Crockford撰寫，是深入理解JavaScript精髓的經典書籍。</div>
+                <div class="book-url"><a href="https://example.com/js-good-parts" target="_blank">書籍連結</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="書籍封面">
+            <div class="temp">
+                <div class="book-title">《Clean Code》</div>
+                <div class="book-description">Robert C. Martin所著，介紹如何撰寫可維護且清晰的程式碼。</div>
+                <div class="book-url"><a href="https://example.com/clean-code" target="_blank">書籍連結</a></div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <input type="text" id="name" placeholder="輸入書籍名稱">
+    <input type="text" id="des" placeholder="輸入書籍描述">
+    <input type="text" id="url" placeholder="輸入書籍網址">
+</br>
+    <button id = "addButton">新稱書籍</button>
+    <!-- 使用者輸入 -->
+    <script>
+        document.getElementById("addButton").addEventListener("click", addBook, false);
+        function addBook() {
+            let nam = document.getElementById('name').value;
+            let d = document.getElementById('des').value;
+            let u = document.getElementById('url').value;
+            if(nam == "" || d == "") {
+                window.alert("請輸入書籍名稱和描述!");
+            }
+            else{
+                let pos = document.getElementById('bookList')
+                console.log(nam);
+                console.log(d);
+                console.log(u);
+                console.log(pos);
+                pos.innerHTML = pos.innerHTML + '<div class="book"><img src="https://via.placeholder.com/150" alt="書籍封面"><div class="temp"><div class="book-title">《'+nam+'》</div><div class="book-description">' + d + '</div><div class="book-url"><a href="'+ url +'" target="_blank">書籍連結</a></div></div></div>'
+            }
+        }
+    </script>
+    
+
+    <!-- JavaScript -->
+
+</body>
+
+</html>

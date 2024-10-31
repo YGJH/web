@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="exercise4-2" content="width=device-width, initial-scale=1.0">
+    <title>exercise4-2</title>
+    <style>
+        @import url(hw2.css);
+    </style>
+    <script>
+        let pok= [ "ignore" ,"pikachu.png" , "bulbasaur.png" , "charmander.png" , "squirtle.png"];
+        let num = prompt("Please input the Pokemon you like\n(1=pikachu, 2=bulbasaur, 3=charmander, 4=squirtle, 5=random):")
+        let len = prompt("Please input the side length(>=1 and <= 10):")
+        if(num <= 4 && num > 0) {
+            for(let i = 0 ; i < len ; i++) {
+                for(let j = 0 ; j < len ; j++) {
+                    document.writeln("<img src=\"" + pok[num] + "\">");
+                }
+                document.writeln("</br>");
+            }
+        }
+        // random
+        else {
+            for(let i = 0 ; i < len ; i++) {
+                for(let j = 0 ; j < len ; j++) {
+                    let x = Math.floor((Math.random()*4)+1);
+                    console.log(x);
+                    document.writeln("<img src=\"" + pok[x] + "\">");
+                }
+                document.writeln("</br>");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

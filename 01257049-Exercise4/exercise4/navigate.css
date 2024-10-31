@@ -1,0 +1,17 @@
+.temp{
+    color: navy;
+    text-decoration: underline;
+    font-family: "Helvetica" ;
+    font-size: 5em;
+}
+span{
+    font-size: 5em;
+    font-family:"Helvetica" ;
+}
+
+.name{
+    font-size: 5em;
+    font-family: "Helvetica" ;
+    font-weight: bold;
+    color: firebrick;
+}

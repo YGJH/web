@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<!-- Fig. 4.17: dropdown.html -->
+<!-- CSS drop-down menu. -->
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>
+      Drop-Down Menu
+   </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      @import "navigation.css";
+      @media only screen and (max-width: 600px) {
+         .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+         }
+
+         .dd {
+            width: auto;
+         }
+
+         body {
+            font-family: arial, sans-serif
+         }
+
+         nav {
+            font-weight: bold;
+            justify-content: space-evenly;
+            color: white;
+            border: 2px solid RoyalBlue;
+            text-align: center;
+            width: 100%;
+            /* width: 10em; */
+            background-color: RoyalBlue;
+         }
+
+         nav ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         nav:hover ul {
+            display: block;
+         }
+
+         nav ul li {
+            justify-content: space-evenly;
+            border-top: 2px solid RoyalBlue;
+            background-color: white;
+            align-items: center;
+            /* width: 10em; */
+            width: auto;
+            color: black;
+         }
+
+         nav ul li:hover {
+            background-color: PowderBlue;
+         }
+         ul{
+            position: relative;
+         }
+         a {
+            justify-content: space-evenly;
+            text-decoration: none;
+         }
+         h1{
+            display: none;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <h1 class="wo">Web Intelligence</h1>
+   <div class="flex-container">
+      <nav>JavaScript
+         <ul>
+            <li><a target="_blank" href="https://www.w3schools.com/js/default.asp">W3School</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript">MDN</a></li>
+            <li><a target="_blank" href="https://www.json.org/json-en.html">JSON</a></li>
+         </ul>
+      </nav>
+      <nav>Client-side Framework
+         <ul>
+            <li><a href="https://react.dev/">React</a></li>
+            <li><a href="https://vuejs.org/">Vue</a></li>
+            <li><a href="https://angular.tw/">Angular</a></li>
+         </ul>
+      </nav>
+      <nav>node.js
+         <ul>
+            <li><a href="https://www.w3schools.com/nodejs/">Node.js tutorial</a></li>
+         </ul>
+      </nav>
+      <nav>PHP
+         <ul>
+            <li><a href="#">HI</a></li>
+            <li><a href="#">Hello</a></li>
+            <li><a href="#">你好</a></li>
+            <li><a href="#">kaixo</a></li>
+            <li><a href="#">Guten Tag</a></li>
+         </ul>
+      </nav>
+      <nav>ASP.Net
+         <ul>
+            <li><a href="#">こんにちは</a></li>
+            <li><a href="#">안녕하세요</a></li>
+            <li><a href="#">Привет </a></li>
+            <li><a href="#">Bonjour</a></li>
+            <li><a href="#">مرحبا </a></li>
+         </ul>
+      </nav>
+      <nav>Spring Boot
+         <ul>
+            <li><a href="#">Olá</a></li>
+            <li><a href="#">tere</a></li>
+            <li><a href="#">¡¡Buenas!</a></li>
+            <li><a href="#">здравей</a></li>
+            <li><a href="#">- ahoj</a></li>
+         </ul>
+   </nav>
+      <div class="dd">
+         人工神經網路（Artificial Neural Network，縮寫 ANN），簡稱神經網路（Neural Network，縮寫
+         NN）或類神經網路，是一種模仿生物神經網路(動物的中樞神經系統，特別是大腦)的結構和
+         功能的數學模型或計算模型，用於對函式進行估計或近似。神經網路由大量的人工神經元聯
+         結進行計算。大多數情況下人工神經網路能在外界資訊的基礎上改變內部結構，是一種自適
+         應系統。
+      </div>
+      <div class="dd">
+         馬可夫鏈（Markov chain），因俄國數學家安德烈·馬可夫（俄語：Андрей Андреевйч Марков）
+         得名，為狀態空間中經過從一個狀態到另一個狀態的轉換的隨機過程。該過程要求具備「無
+         記憶」的性質：下一狀態的機率分布只能由當前狀態決定，在時間序列中它前面的事件均與
+         之無關。
+      </div>
+      <div class="dd">
+         蒙地卡羅方法（Monte Carlo method），也稱統計模擬方法。方法可以粗略地分成兩類：一類是
+         所求解的問題本身具有內在的隨機性，藉助電腦的運算能力可以直接模擬這種隨機的過程。
+         例如在核物理研究中，分析中子在反應爐中的傳輸過程。另一種類型是所求解問題可以轉化
+         為某種隨機分布的特徵數，比如隨機事件出現的機率，或者隨機變數的期望值。通過隨機抽
+         樣的方法，以隨機事件出現的頻率估計其機率，或者以抽樣的數字特徵估算隨機變數的數字
+         特徵，並將其作為問題的解。
+      </div>
+      <div class="dd">
+         生成式人工智慧（Generative artificial intelligence，或稱Generative AI、生成式AI）是一種人工智
+         慧系統，能夠產生文字、圖像或其他媒體以回應提示(Prompt)。2020 年代初，基於Transformer
+         的深度神經網路的進步，使得許多生成式AI 系統以接受自然語言提示作為輸入而聞名，其
+         中包括ChatGPT、Bing Chat、Bard 和LLaMA 等大型語言模型之聊天機器人，以及Stable Diffusion、
+         Midjourney 和DALL-E 等從文字生成圖像的人工智慧藝術系統。
+      </div>
+   </div>
+   <iframe src="Exercise3-1.html">home</iframe>
+
+</body>
+
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+
+
+-->
