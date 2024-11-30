@@ -21,6 +21,9 @@ function mouseOver(e) {
 
 function mouseOut(e) {
    // put the original image back when the mouse moves away
+   console.log(e.target.getAttribute("id"));
+   console.log(e);
+
    if (e.target.getAttribute("id") == "heading") {
       e.target.setAttribute("src", image1.getAttribute("src"));
    } // end if

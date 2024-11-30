@@ -1,0 +1,25 @@
+caption{
+    width: 200px;
+    font-size: 20px;
+    margin: 5px 5px;    
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: aquamarine;
+}
+
+table{
+    background-color: antiquewhite;
+    border: solid;
+    border-width: 3px;
+}
+th{
+    border-right: solid;
+    border-bottom: solid;
+    border-width: 3px;
+}
+td{
+    border-bottom: solid;
+    border-width: 3px;
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Simple Animation</title>
+	<script>
+		const picAry = new Array("microsoft", "google", "yahoo", "facebook", "amazon", "apple");
+		
+	
+		window.setInterval(show , 2000);
+
+		function random(x) {
+			return Math.floor(Math.random() * x)+100;
+		}
+		
+		function show() {
+			let x, y;
+			document.getElementById('canvas').innerHTML = "";
+			for(let i = 0 ; i < picAry.length ; ++i) {
+				x = random(300);
+				y = random(300);
+				console.log(x);
+				console.log(y);
+				let pic = document.createElement('img');
+				console.log(picAry[i]);
+				pic.setAttribute("src" , picAry[i] + '.png');
+				pic.setAttribute("style" , 'z-index: '+ random(10) + ';position: absolute; top: '+ y +'px; left: ' + x + 'px; width: 200px;');
+				document.getElementById("canvas").appendChild(pic);
+				// document.getElementById('canvas')
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="canvas"></div>
+</body>
+
+</html>

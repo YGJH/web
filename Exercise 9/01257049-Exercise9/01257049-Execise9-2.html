@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pin Pictures</title>
+    <style type="text/css">
+        div.nav {
+            border: 1px solid skyBlue;
+            margin-left: 3px;
+            padding: 3px;
+            float: left;
+        }
+
+        input,
+        p,
+        li {
+            font-family: Helvetica,
+                "Microsoft YaHei", "LiHei Pro", TW-Kai;
+        }
+
+        li {
+            font-size: 12px;
+        }
+        
+        img.picture {
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        let z_cnt = 0;
+        function random(x) {
+            return Math.floor(Math.random()*x)+1;
+        }
+        function start() {
+            load();
+            document.getElementById('addButton').addEventListener('click' , addimg , false);
+            document.getElementById('removeAllButton').addEventListener('click' , removeall , false);
+        }
+        function load() {
+            z_cnt = 0;
+            let bb = document.getElementById('board');
+            for(let i = 0 ; i < localStorage.length ; ++i) {
+                let tmp = localStorage.getItem(z_cnt);
+                let p = document.createElement('img');
+                let pin = document.createElement('img');
+                tmp = JSON.parse(tmp);
+                // console.log(t);
+                // console.log(t.picture);
+                // console.log(tmp.pinpic);
+                pin.setAttribute('src' , tmp.pinpic);
+                pin.setAttribute('style' , tmp.pinstyle);
+                p.setAttribute('src' , tmp.picture);
+                p.setAttribute('style' , tmp.style);
+                bb.appendChild(p);
+                bb.appendChild(pin);
+                z_cnt+=3;
+            }
+        }
+        function removeall() {
+            localStorage.clear();
+            z_cnt = 0;
+            document.getElementById('board').innerHTML = "";
+        }
+        function addimg() {
+            
+            let pic = document.getElementById('pic').value;
+            let x = document.getElementById('x').value;
+            let y = document.getElementById('y').value;
+            // createpin
+            let pin = document.createElement('img');
+            let choice = random(3);
+            if(choice == 3) { // yellow
+                choice = 'yellow.png';
+            }
+            else if(choice == 2) {
+                choice = 'blue.png';
+            }
+            else{
+                choice = 'red.png';
+            }
+            pin.setAttribute('src' , choice);
+            xx = parseInt(x) + 100;
+            yy = parseInt(y) - 20;
+            let t = parseInt(z_cnt) + 2;
+            pin.setAttribute('style' , "width:30px;position:absolute; top:"+yy+'px;left:'+xx+'px; z-index:' + (t+1));
+            document.getElementById('board').appendChild(pin);
+            // create picture
+            let newNode = document.createElement('img');
+            let tex;
+            if(pic < 10){
+                newNode.setAttribute('src' , '0'+pic+'.png');
+                newNode.setAttribute('style' , "width: 200px; height:200px;position:absolute; top:"+y+'px;left:'+x+'px;z-index:'+t);
+                tex = {
+                    "pinpic":choice,
+                    "pinstyle":"width:30px;position:absolute; top:"+yy+'px;left:'+xx+'px; z-index:' + (t+1),
+                    "picture":'0'+pic+'.png',
+                    "style": "width: 200px; height:200px;position:absolute; top:"+y+'px;left:'+x+'px;z-index:'+t
+                }
+            }
+            else{
+                newNode.setAttribute('src' , pic+'.png');
+                newNode.setAttribute('style' , "width: 200px; height:200px;position:absolute; top:"+y+'px;left:'+x+'px;z-index:'+t);
+
+                tex = {
+                    "pinpic":choice,
+                    "pinstyle":"width:30px;position:absolute; top:"+yy+'px;left:'+xx+'px; z-index:' + (t+1),
+                    "picture":pic+'.png',
+                    "style":"width: 200px; height:200px;position:absolute; top:"+y+'px;left:'+x+'px;z-index:'+z_cnt+2
+                }
+            }
+            document.getElementById('board').appendChild(newNode);
+            //add to local storage
+            localStorage.setItem(z_cnt , JSON.stringify(tex));
+            z_cnt += 3;
+        }
+        window.addEventListener('load' , start , false);
+    </script>
+</head>
+
+<body>
+    <img src="blackboard.jpg" height="600" width="800" style="float:left; z-index:0;" />
+    <img id="img-0" class="picture" style="top: 50px; left: 50px; z-index:1;" src="doraemon.png" />
+    <img id="pin-0" class="picture" style="top: 40px; left: 135px; z-index:1;" width="30px" src="red.png" />
+    <div id='board'>
+
+    </div>
+    <div id="nav" class="nav">
+        <form action="#">
+            <p>
+                <label>要放哪個道具圖片(請輸入編號):
+                    <input type="number" id="pic" min="1" max="10" step="1" value="1" />
+                </label>
+                <br />
+                <label>圖片X座標:
+                    <input type="number" id="x" min="40" max="600" step="1" value="40" />
+                </label>
+                <br />
+                <label>圖片Y座標:
+                    <input type="number" id="y" min="40" max="400" step="1" value="100" />
+                </label>
+            </p>
+            <p>
+                <input type="button" value="新增圖片" id="addButton">
+                <input type="button" value="移除所有圖片" id="removeAllButton">
+            </p>
+        </form>
+        <ul>
+            <li>[01]任意門</li>
+            <li>[02]時光機</li>
+            <li>[03]竹蜻蜓</li>
+            <li>[04]時光布</li>
+            <li>[05]記憶麵包</li>
+            <li>[06]縮小燈</li>
+            <li>[07]翻譯蒟蒻</li>
+            <li>[08]如果電話亭</li>
+            <li>[09]穿透環</li>
+            <li>[10]更衣照相機</li>
+        </ul>
+    </div>
+</body>
+
+</html>

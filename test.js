@@ -1,19 +1,37 @@
+window.addEventListener('load' , start, false);
+let cnt = 0;
+function start() {
+    loadStorage();
+    document.getElementById('clear').addEventListener('click' , function() {
+        localStorage.clear();
+        loadStorage();
+        cnt=0;
+    } , false);
+    document.getElementById('submit').addEventListener('click' , function(){
+        let name = document.getElementById('name').value;
+        console.log(name);
+        localStorage.setItem(cnt++,name);
+        loadStorage();
+    })
+}
 
-window.addEventListener('load' , addElement, false);
 
-function addElement() {
-
-    let newNode = document.createElement("span");
-    console.log(newNode);
-    let newtext = document.createTextNode('Hello world');
-    console.log(newtext);
-    newNode.appendChild(newtext);
-    let tmp = document.getElementById('div1');
-    let ptmp = tmp.parentElement;
-    console.log(ptmp);
-    console.log(window);
-    ptmp.insertBefore(newNode , tmp);
-    let k = newNode;
-    ptmp.insertBefore(k , tmp.nextSibling);
-
+function loadStorage(){
+    let tags = [];
+    let len = localStorage.length;
+    console.log("len = " + len);
+    for(let i = 0 ; i < len ; i++) {
+        tags[i] = localStorage.getItem(i);
+    }
+    tags.sort();
+    let ta = document.getElementById('insideTable');
+    ta.innerHTML='';
+    for(let tag in tags){
+        // let tmp = document.createElement('tr');
+        ta.innerHTML += ('<th>' + tag + '<td>' + tags[tag] + '</td></th>');
+        // console.log(tmp);
+        // document.getElementById('insideTable').appendChild(tmp);
+        // ta.innerHTML+=tmp;
+    }
+    console.log(ta);
 }
