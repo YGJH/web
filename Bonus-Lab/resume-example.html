@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    References: 
+    https://codepen.io/knaman2609/pen/Zbyjvv
+    https://pixabay.com/illustrations/donald-trump-america-president-5103361/ 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            background-color: rgb(40, 40, 46);
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 26px;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            border: #9c9c9c solid 1px;
+            border-radius: 20px;
+            box-shadow: -5px -5px 10px rgb(0, 0, 0);
+            max-width: 700px;
+            background: #5b565c;
+            margin: 0px auto 0px;
+            /* box-shadow: 1px 1px 2px #DAD7D7; */
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .header {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .full-name {
+            color: white;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .first-name {
+            color: white;
+            font-weight: 700;
+        }
+
+        .last-name {
+            font-size: medium;
+            color: white;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .email,
+        .phone {
+            color: #ffffff;
+            font-weight: 300;
+        }
+
+        .separator {
+            height: 10px;
+            display: inline-block;
+            border-left: 2px solid #999;
+            margin: 0px 10px;
+        }
+
+        .position {
+            float:left;
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: underline;
+        }
+
+        .details {
+            line-height: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .delayed {
+            animation: fadeIn 1s ease-in-out 1s forwards;
+        }
+
+        .section {
+            color: rgb(223, 223, 223);
+            margin-bottom: 40px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .section__title {
+            font-size: large;
+            letter-spacing: 2px;
+            color: #54AFE4;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .section__list-item {
+            margin-bottom: 40px;
+        }
+
+        .section__list-item:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .left,
+        .right {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .left {
+            width: 60%;
+        }
+
+        .right {
+            text-align: right;
+            width: 39%;
+        }
+
+        .name {
+            float: left;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-style: italic;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .skills__item {
+            margin-bottom: 10px;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #C3DEF3;
+            border-radius: 20px;
+            margin-right: 3px;
+        }
+        .desc {
+            float: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+        }
+
+        .name {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+
+        input:checked+label {
+            background: #79A9CE;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+    <div class="container">
+        <div class="header">
+            <div class="full-name">
+                <span class="first-name">Yang</span>
+                <span class="last-name">Zig-Sian</span>
+            </div>
+            <div class="contact-info">
+                <span class="email" style="color: white">Email: </span>
+                <span class="email-val">jihuty@gmail.com</span>
+                <span class="separator"></span>
+                <strong class="phone" style="color: rgb(255, 255, 255)">Phone: </strong>
+                    <span class="phone-val">0916439130</span>
+            </div>
+
+            <div>
+                <img src="123123.png" width="60%">
+            </div>
+
+            <div class="about">
+                <span class="position">University Student</span>
+                <span class="desc">
+                    I am a University second grade Student major in Computer Science. I have some experience in c/c++,
+                    python, and a little knowledge about cryptography.
+                </span>
+            </div>
+        </div>
+        <div class="details">
+
+            <div class="section delayed">
+                <!-- 內容 -->
+                <!-- <div class="section"> -->
+                <div class="section__title">Experience</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">Chairman of the Computer Research Club at Neili High School</div>
+                            <div class="addr">No. 120, Chengzhang 4th St., Zhongli Dist., Taoyuan City, Taiwan
+                                (R.O.C.)</div>
+                            <div class="duration">Set 2021 - Jun 2022</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Chairman</div>
+                            <div class="desc">Planing club course, Learning to lead an organization</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section delayed">
+                <div class="section__title">Education</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">National Taiwan Ocean University</div>
+                            <div class="addr">No.2, Beining Rd., Zhongzheng Dist., Keelung City 202301, Taiwan (R.O.C.)
+                            </div>
+                            <div class="duration">Sep 2023 - Jun 2027</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Undergraduate Student</div>
+                            <div class="desc">Learning hardware describtion language and c/c++, python, Javascript, etc.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">Taoyuan Municipal Nei-Li Senior High School</div>
+                            <div class="addr">No. 120, Chengzhang 4th St., Zhongli Dist., Taoyuan City, Taiwan (R.O.C.)
+                            </div>
+                            <div class="duration">Sep 2020 - Jul 2023</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Graduate Student</div>
+                            <div class="desc">Some basis knowledge, like Physics, Math, English</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="section delayed">
+                <div class="section__title">Certificate</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="name">IELTS</div></br>
+                        <img src="ielts.png" style="width: auto ; height: 200px;">
+                        <div class="text">Though I am not so influence in English, but I consider it is sufficient to
+                            handle most daliy situation.</div>
+                    </div>
+
+                    <div class="section__list-item">
+                        <div class="name">CPE</div>
+                        <img src="cpe.png" style="width: 600px; height: 100px;">
+                        <div class="text">just mean I have normal ability to programming</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="section delayed">
+            <div class="section__title">Skills</div>
+            <div class="skills">
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">
+                            Javascript
+                        </div>
+                    </div>
+                    <div class="right">
+                        <input id="ck1" type="checkbox" checked />
+
+                        <label for="ck1"></label>
+                        <input id="ck2" type="checkbox" checked />
+
+                        <label for="ck2"></label>
+                        <input id="ck3" type="checkbox" checked />
+
+                        <label for="ck3"></label>
+                        <input id="ck4" type="checkbox" checked />
+                        <label for="ck4"></label>
+                        <input id="ck5" type="checkbox" />
+                        <label for="ck5"></label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        CSS</div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked />
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked />
+
+                    <label for="ck2"></label>
+                    <input id="ck3" type="checkbox" checked />
+
+                    <label for="ck3"></label>
+                    <input id="ck4" type="checkbox" />
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox" />
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        C/C++</div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked />
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked />
+                    <label for="ck2"></label>
+                    <input id="ck3" type="checkbox" checked />
+                    <label for="ck3"></label>
+                    <input id="ck4" type="checkbox" />
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox" />
+                    <label for="ck5"></label>
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        Cryptography</div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked />
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked />
+                    <label for="ck2"></label>
+                    <input id="ck3" type="checkbox" checked />
+                    <label for="ck3"></label>
+                    <input id="ck4" type="checkbox" />
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox" />
+                    <label for="ck5"></label>
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        python</div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked />
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked />
+                    <label for="ck2"></label>
+                    <input id="ck3" type="checkbox" checked />
+                    <label for="ck3"></label>
+                    <input id="ck4" type="checkbox" />
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox" />
+                    <label for="ck5"></label>
+                </div>
+            </div>
+
+        </div>
+        <div class="section delayed">
+            <div class="section__title">
+                Interests
+            </div>
+            <div class="section__list">
+                <div class="section__list-item">
+                    <nav>
+                        <ul>
+                            <li>
+                                competitive programming.
+                            </li>
+                            <li>
+                                Cryptography
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
